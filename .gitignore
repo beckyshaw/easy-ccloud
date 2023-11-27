@@ -1,12 +1,11 @@
 .terraform
 .tf
-
 *keys
 *keys.txt
 kube/exports_api/
 kube/exports_api/
 kube/exports_api/
-kube/prod/env/
-kube/nonprod/env
+kube/prod/
+kube/nonprod/
 kube/vars
 kube/dev
