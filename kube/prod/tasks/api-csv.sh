@@ -32,12 +32,12 @@ fi
 read -p " Enter client name for API retrieval :  " clientName
 echo " You have chosen $clientName " 
 read -p " Continue? (y/n) " CONT
-if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "CONT" = "Yes" ]; then
+if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "$CONT" = "Y" ] || [ "CONT" = "Yes" ]; then
     echo -------------------------------------------------------------------
     echo "exporting api keys for $clientName "
-        eval " confluent api-key list | grep $clientName > prod/env/$clientName.csv "
-        echo " Complete. File location prod/env/$clientName.csv "
-        eval "ls prod/env | grep $clientName"
+        eval " confluent api-key list | grep $clientName > prod/key-export/$clientName.csv "
+        echo " Complete. File location prod/key-export/$clientName.csv "
+        eval "cat prod/key-export/$clientName.csv"
     echo -------------------------------------------------------------------
         echo "Complete..."
 else
