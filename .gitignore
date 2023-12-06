@@ -1,9 +1,8 @@
 .terraform
 .tf
+*key
 *keys
 *keys.txt
 ccloud/exports_api/
 ccloud/exports_api/
 ccloud/exports_api/
-ccloud/vars
-ccloud/dev

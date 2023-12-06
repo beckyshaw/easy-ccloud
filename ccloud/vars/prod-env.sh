@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Variables: 
-ENV="confluent-prod"
+ENV="{PROD_AWS_ACCOUNT_NAME}" # this is your prod aws account for SSO e.g. confluent-prod
 datestring="$(date)"
 BOOTSTRAP_PROD="{bootstrap-server:port}"
 VLDT_VALUE=confluent.value.schema.validation=true
