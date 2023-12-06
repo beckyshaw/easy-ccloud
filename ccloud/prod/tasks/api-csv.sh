@@ -35,9 +35,9 @@ read -p " Continue? (y/n) " CONT
 if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "CONT" = "Yes" ]; then
     echo -------------------------------------------------------------------
     echo "exporting api keys for $clientName "
-        eval " confluent api-key list | grep $clientName > nonprod/key-export/$clientName.csv "
-        echo " Complete. File location nonprod/key-export/$clientName.csv "
-        eval "cat nonprod/key-export/$clientName.csv"
+        eval " confluent api-key list | grep $clientName > prod/key-export/$clientName.csv "
+        echo " Complete. File location prod/key-export/$clientName.csv "
+        eval "cat prod/key-export/$clientName.csv"
     echo -------------------------------------------------------------------
         echo "Complete..."
 else
