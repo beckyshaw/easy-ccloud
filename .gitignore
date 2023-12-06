@@ -1,11 +1,8 @@
 .terraform
 .tf
+*key
 *keys
 *keys.txt
-kube/exports_api/
-kube/exports_api/
-kube/exports_api/
-kube/prod/
-kube/nonprod/
-kube/vars
-kube/dev
+ccloud/exports_api/
+ccloud/exports_api/
+ccloud/exports_api/

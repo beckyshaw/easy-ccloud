@@ -1,6 +1,6 @@
 # #!/bin/bash
 # Variable file
-source vars/prod-env.sh
+source vars/stg-env.sh
 
 # Current-context verification
 if [[ $CURR_CTXT =~ $ENV ]]; then
@@ -17,7 +17,7 @@ else
     echo ---------------------------------------------------------------
     echo " Select kube context : "
     PS3="Select context: "
-    select NEW_CTXT in core-dev confluent-nonprod confluent-prod
+    select NEW_CTXT in core-dev confluent-non nonprod confluent- prod
     do
         echo "Selected context: $CONTEXT"   
         sleep 3
@@ -32,12 +32,12 @@ fi
 read -p " Enter client name for API retrieval :  " clientName
 echo " You have chosen $clientName " 
 read -p " Continue? (y/n) " CONT
-if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "$CONT" = "Y" ] || [ "CONT" = "Yes" ]; then
+if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "CONT" = "Yes" ]; then
     echo -------------------------------------------------------------------
     echo "exporting api keys for $clientName "
-        eval " confluent api-key list | grep $clientName > prod/key-export/$clientName.csv "
-        echo " Complete. File location prod/key-export/$clientName.csv "
-        eval "cat prod/key-export/$clientName.csv"
+        eval " confluent api-key list | grep $clientName >  nonprod/key-export/$clientName.csv "
+        echo " Complete. File location  nonprod/key-export/$clientName.csv "
+        eval "ls  nonprod/key-export | grep $clientName"
     echo -------------------------------------------------------------------
         echo "Complete..."
 else

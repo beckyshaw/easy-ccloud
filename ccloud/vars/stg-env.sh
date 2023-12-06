@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Variables: 
-ENV="confluent-nonprod"
+ENV="{NONPROD_AWS_ACCOUNT_NAME}" # this is your nonprod aws account for SSO e.g. confluent-nonprod
 datestring="$(date)"
 BOOTSTRAP_NONPROD="{bootstrap-server:port}"
 VLDT_VALUE=confluent.value.schema.validation=true
