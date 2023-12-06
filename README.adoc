@@ -16,3 +16,6 @@ This is a playground repo for learning python
 = Discussion
 If you see something here that you think can be improved or done in a mroe efficient way please drop a thread in the discussions page. Also open to hear ideas for future projects.
 Leave any threads here if you need help with something 
+
+# Funding
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I1RWQ4C)
