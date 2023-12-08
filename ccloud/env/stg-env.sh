@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Variables: 
-ENV="confluent-nonprod"
+ENV="{kubernetes-prod-context-name}"
 datestring="$(date)"
 BOOTSTRAP_PROD="{bootstrap-server:port}"
 VLDT_VALUE=confluent.value.schema.validation=true
