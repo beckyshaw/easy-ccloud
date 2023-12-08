@@ -31,9 +31,10 @@ fi
 
 echo ---------------------------------------------------------------------------
 echo " Datetime: $datestring "
-# echo " Logging into Confluent Cloud"
-# eval "confluent login"
-#     sleep 5
+echo " Log into Confluent Cloud. Close browser window and rerun"
+eval "confluent login"
+echo " waiting ... "
+    sleep 3
 
 echo "API-Key name translates to file name containing api-keys"
 read -p " Please enter the api key name... " CLIENT_FILE
