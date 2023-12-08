@@ -8,6 +8,13 @@ Most of this is for Confluent Cloud tasks and Kafka tasks. There are multiple sc
 Before this will work please ensure you are updating the variable in the /ccloud/vars files for stg and prod. 
 To find your Kubernetes context name type " kubectl config get-contexts" and change this to the corresponding name
 
+Dependencies:
+confluent-cli
+
+Files to configure:
+  vars/prod-env.sh
+  vars/stg-env.sh
+
 ## Terraform
 This is empty for now
 
