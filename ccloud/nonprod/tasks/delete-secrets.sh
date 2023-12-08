@@ -1,6 +1,6 @@
 # #!/bin/bash
 # Variable file
-source vars/prod-env.sh
+source vars/stg-env.sh
 
 # Current-context verification
 if [[ $CURR_CTXT =~ $ENV ]]; then
