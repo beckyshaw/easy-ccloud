@@ -30,6 +30,7 @@ echo -------------------------------
 fi
 
 read -p " Enter client name for API retrieval :  " clientName
+echo "Client name must be full api key name : eg product-location.adw.stg.data.sainsburys "
 echo " You have chosen $clientName " 
 read -p " Continue? (y/n) " CONT
 if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "CONT" = "Yes" ]; then
