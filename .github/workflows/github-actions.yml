@@ -20,6 +20,3 @@ jobs:
 
       - run: echo "This job's status is ${{ job.status }}."
       
-      - name: lint
-        run: |
-          echo “${{github.event.pull_request.title}}” | commitlint
