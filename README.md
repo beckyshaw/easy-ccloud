@@ -3,6 +3,18 @@
 
 Most of the scripts here are dirty and untidy but functional all the same. They're mostly for my own purpose and development but if you're here then i will have shared access for something at some point or by the power of the internet, here you are. 
 
+## Quick tips
+Set the below aliases for quick running of scripts. All commands must be run from the ccloud directory
+
+```
+  alias nonnonprod-get-secret="sh nonprod/tasks/get-secrets.sh"
+  alias nonprod-get-api="sh nonprod/tasks/api-csv.sh"
+  alias nonprod-delete-secret="sh nonprod/tasks/delete-secrets.sh"
+  alias prod-get-secret="sh prod/tasks/get-secrets.sh"
+  alias prod-get-api="sh prod/tasks/api-csv.sh"
+  alias prod-delete-secret="sh prod/tasks/delete-secrets.sh"
+```
+
 ## ccloud Repo
 Most of this is for Confluent Cloud tasks and Kafka tasks. There are multiple scripts for managing topics and API keys withing Confluent Cloud.
 Before this will work please ensure you are updating the variable in the /ccloud/vars files for stg and prod. 
