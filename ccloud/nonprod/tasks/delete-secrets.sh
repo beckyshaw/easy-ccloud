@@ -29,30 +29,35 @@ echo "New context is: $NEW_CTXT"
 echo -------------------------------
 fi
 
+
 echo ---------------------------------------------------------------------------
 echo " Datetime: $datestring "
-echo " Log into Confluent Cloud. Close browser window and rerun"
-eval "confluent login"
-echo " waiting ... "
-    sleep 3
+# echo " Logging into Confluent Cloud"
+# eval "confluent login"
+#     sleep 5
 
 echo "API-Key name translates to file name containing api-keys"
-read -p " Please enter the api key name... " CLIENT
-API_KEY="$KEY_DIR$CLIENT"
+read -p "  Enter file name: " CLIENT_FILE
+
+echo "Selected file is $CLIENT_FILE.."
 echo ---------------------------------------------------------------------------
 echo "You have selected the following api-keys to delete: "
-eval " cat $API_KEY "
+eval " cat nonprod/env/$CLIENT_FILE "
+echo "Line count : " | eval " cat nonprod/env/$CLIENT_FILE | wc -l"
 echo ---------------------------------------------------------------------------
 read -p  " Is this correct ? (yes/no) " CONT
     if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "CONT" = "Yes" ]; then
         echo ---------------------------------------------------------------
-        echo "Key/s deleting .... "
-            while read -r line
+        echo "Deleting keys .... "
+            while read -r line;
             do  
-                [[ -n "$line" ]] && yes | eval $DELETE_KEY $line 
-            done < $API_KEY
-        echo ---------------------------------------------------------------
+                [[ -n "$line" ]] && yes | eval "confluent api-key delete $line";
+            done < "nonprod/env/$CLIENT_FILE"
+        echo "Finalising..." 
+        func_progress
+        echo ---------------------------------------------------------------------------
+        echo "Complete.. Exiting.."
     
     else
         echo " Exiting.....";
-    fi
+fi
