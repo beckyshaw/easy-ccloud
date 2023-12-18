@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Variables: 
-ENV="{kubernetes-context-prod name}"
+ENV="{kubernetes-context-prod-name}"
 datestring="$(date)"
 BOOTSTRAP_PROD="{bootstrap-server:port}"
 VLDT_VALUE=confluent.value.schema.validation=true
@@ -26,3 +26,13 @@ AWSPREVIOUS="aws secretsmanager  get-secret-value --secret-id $SECRET_ID --versi
 KEY_DIR="prod/env/"
 # API_KEY="prod/env/test-key"
 DELETE_KEY="confluent api-key delete"
+
+
+# FUNCTIONS
+function func_progress() {
+for((i=0;i<=100;i+=3)); do
+    printf "%-*s" $((i+1)) '[' | tr ' ' '#'
+    printf "%*s%3d%%\r"  $((101-i))  "]" "$i"
+    sleep 0.3
+done; echo
+}

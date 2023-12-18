@@ -30,17 +30,30 @@ echo -------------------------------
 fi
 
 read -p " Enter client name for API retrieval :  " clientName
-echo "Client name must be full api key name : eg product-location.adw.prod.data.sainsburys "
 echo " You have chosen $clientName " 
 read -p " Continue? (y/n) " CONT
 if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "CONT" = "Yes" ]; then
     echo -------------------------------------------------------------------
-    echo "exporting api keys for $clientName "
-        eval " confluent api-key list | grep $clientName > prod/key-export/$clientName.csv "
-        echo " Complete. File location prod/key-export/$clientName.csv "
-        eval "cat prod/key-export/$clientName.csv"
+    read -p "Confluent Login ? " LOGIN_CONFLUENT
+    if [ "$LOGIN_CONFLUENT" = "yes" ] || [ "$LOGIN_CONFLUENT" = "y" ] || [ "$LOGIN_CONFLUENT" = "Yes" ]; then
+        eval "Login to Confluent Cloud? (Only needed on first run)"
+        echo "Login Complete "
+    elif [ "$LOGIN_CONFLUENT" = "no" ] || [ "$LOGIN_CONFLUENT" = "n" ] || [ "$LOGIN_CONFLUENT" = "No" ]; then
+        echo ;
+    else 
+        echo "Exiting.."
+fi
+    echo "Exporting API-keys for $clientName "
+    echo " Confluent Update Notes : "
+echo
+    func_progress && eval " confluent api-key list | grep $clientName > prod/key-export/$clientName.csv "
+    echo
+    echo " Complete. File location: prod/key-export/$clientName.csv "
+    eval "cat prod/key-export/$clientName.csv"
     echo -------------------------------------------------------------------
         echo "Complete..."
 else
     echo "Exiting....."
 fi
+
+
