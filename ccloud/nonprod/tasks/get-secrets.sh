@@ -33,7 +33,6 @@ echo
 echo
 echo ---------------------------------------------------------------------------
 echo " Datetime: $datestring "
-echo " Test ID Nonprod: property-place.adw.dev.data.sainsburys"
 read -p " Please enter the Secret_ID... " SECRET_ID
 echo ---------------------------------------------------------------------------
 
