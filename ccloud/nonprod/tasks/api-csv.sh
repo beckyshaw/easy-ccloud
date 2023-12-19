@@ -6,10 +6,10 @@ source vars/stg-env.sh
 if [[ $CURR_CTXT =~ $ENV ]]; then
 echo "Environment is $ENV"
 echo " Current context is $CURR_CTXT"
-echo -------------------------------
+echo ------------------------------------
 echo "Date: $datestring"
 echo "Environment and context match"
-echo -------------------------------
+echo ------------------------------------
 
 else
     echo ---------------------------------------------------------------
@@ -45,10 +45,11 @@ if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "CONT" = "Yes" ]; then
 fi
     echo "Exporting API-keys for $clientName "
     echo " Confluent Update Notes : "
+    echo " Running ... "
 echo
     func_progress && eval " confluent api-key list | grep $clientName > prod/key-export/$clientName.csv "
-    echo
-    echo " Complete. File location: prod/key-export/$clientName.csv "
+    echo "Complete."
+    echo " File location: prod/key-export/$clientName.csv "
     eval "cat prod/key-export/$clientName.csv"
     echo -------------------------------------------------------------------
         echo "Complete..."

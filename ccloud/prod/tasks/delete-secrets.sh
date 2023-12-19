@@ -6,10 +6,10 @@ source vars/prod-env.sh
 if [[ $CURR_CTXT =~ $ENV ]]; then
 echo "Environment is $ENV"
 echo " Current context is $CURR_CTXT"
-echo -------------------------------
+echo ------------------------------------
 echo "Date: $datestring"
 echo "Environment and context match"
-echo -------------------------------
+echo ------------------------------------
 
 else
     echo ---------------------------------------------------------------
@@ -55,7 +55,6 @@ read -p  " Is this correct ? (yes/no) " CONT
             done < "prod/env/$CLIENT_FILE"
         echo "Finalising..." 
         func_progress
-        echo ---------------------------------------------------------------------------
         echo "Complete.. Exiting.."
     
     else
