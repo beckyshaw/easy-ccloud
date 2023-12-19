@@ -6,10 +6,10 @@ source vars/prod-env.sh
 if [[ $CURR_CTXT =~ $ENV ]]; then
 echo "Environment is $ENV"
 echo " Current context is $CURR_CTXT"
-echo -------------------------------
+echo ------------------------------------
 echo "Date: $datestring"
 echo "Environment and context match"
-echo -------------------------------
+echo ------------------------------------
 
 else
     echo ---------------------------------------------------------------
@@ -34,9 +34,9 @@ echo " You have chosen $clientName "
 read -p " Continue? (y/n) " CONT
 if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "CONT" = "Yes" ]; then
     echo -------------------------------------------------------------------
-    read -p "Confluent Login ? " LOGIN_CONFLUENT
+    read -p "Login to Confluent Cloud? (Only needed on first run) " LOGIN_CONFLUENT
     if [ "$LOGIN_CONFLUENT" = "yes" ] || [ "$LOGIN_CONFLUENT" = "y" ] || [ "$LOGIN_CONFLUENT" = "Yes" ]; then
-        eval "Login to Confluent Cloud? (Only needed on first run)"
+        eval "confluent login"
         echo "Login Complete "
     elif [ "$LOGIN_CONFLUENT" = "no" ] || [ "$LOGIN_CONFLUENT" = "n" ] || [ "$LOGIN_CONFLUENT" = "No" ]; then
         echo ;

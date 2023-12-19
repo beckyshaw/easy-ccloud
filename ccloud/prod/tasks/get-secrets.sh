@@ -6,10 +6,10 @@ source vars/prod-env.sh
 if [[ $CURR_CTXT =~ $ENV ]]; then
 echo "Environment is $ENV"
 echo " Current context is $CURR_CTXT"
-echo -------------------------------
+echo ------------------------------------
 echo "Date: $datestring"
 echo "Environment and context match"
-echo -------------------------------
+echo ------------------------------------
 
 else
     echo ---------------------------------------------------------------
