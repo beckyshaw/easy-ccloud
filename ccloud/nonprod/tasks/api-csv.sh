@@ -47,10 +47,10 @@ fi
     echo " Confluent Update Notes : "
     echo " Running ... "
 echo
-    func_progress && eval " confluent api-key list | grep $clientName > prod/key-export/$clientName.csv "
+    func_progress && eval " confluent api-key list | grep $clientName > nonprod/key-export/$clientName.csv "
     echo "Complete."
-    echo " File location: prod/key-export/$clientName.csv "
-    eval "cat prod/key-export/$clientName.csv"
+    echo " File location: nonprod/key-export/$clientName.csv "
+    eval "cat nonprod/key-export/$clientName.csv"
     echo -------------------------------------------------------------------
         echo "Complete..."
 else
