@@ -29,7 +29,6 @@ echo "New context is: $NEW_CTXT"
 echo -------------------------------
 fi
 echo " Datetime: $datestring "
-echo " Test ID PROD: apt.prd.commercial.argos"
 read -p " Please enter the Secret_ID... " SECRET_ID
 echo ---------------------------------------------------------------------------
 
