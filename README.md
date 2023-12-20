@@ -7,7 +7,7 @@ Most of the scripts here are dirty and untidy but functional all the same. They'
 Set the below aliases for quick running of scripts. All commands must be run from the 'easy-ccloud/ccloud' directory
 
 ```
-  alias nonnonprod-get-secrets="sh nonprod/tasks/get-secrets.sh"
+  alias nonprod-get-secrets="sh nonprod/tasks/get-secrets.sh"
   alias nonprod-get-api="sh nonprod/tasks/api-csv.sh"
   alias nonprod-delete-secrets="sh nonprod/tasks/delete-secrets.sh"
   alias prod-get-secrets="sh prod/tasks/get-secrets.sh"
