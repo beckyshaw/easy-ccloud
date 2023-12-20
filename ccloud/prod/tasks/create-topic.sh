@@ -97,7 +97,7 @@ if  [[ $ENVIRONMENT =~ $ENV ]]; then
     echo "kubectl exec --stdin --tty $KAFKA_POD -- $CREATE_TOPIC"
     echo 
     read -p "Continue (yes/no)? " CONT
-    if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "CONT" = "Yes" ]; then
+    if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "$CONT" = "Y" ] || [ "CONT" = "Yes" ]; then
         eval "kubectl exec --stdin --tty $KAFKA_POD -- $CREATE_TOPIC";
         # echo "Complete"
         echo 

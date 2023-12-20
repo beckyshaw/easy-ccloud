@@ -35,10 +35,10 @@ read -p " Continue? (y/n) " CONT
 if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "CONT" = "Yes" ]; then
     echo -------------------------------------------------------------------
     read -p "Login to Confluent Cloud? (Only needed on first run) " LOGIN_CONFLUENT
-    if [ "$LOGIN_CONFLUENT" = "yes" ] || [ "$LOGIN_CONFLUENT" = "y" ] || [ "$LOGIN_CONFLUENT" = "Yes" ]; then
+    if [ "$LOGIN_CONFLUENT" = "yes" ] || [ "$LOGIN_CONFLUENT" = "y" ] || ["$LOGIN_CONFLUENT" = "Y" ] || [ "$LOGIN_CONFLUENT" = "Yes" ]; then
         eval "confluent login"
         echo "Login Complete "
-    elif [ "$LOGIN_CONFLUENT" = "no" ] || [ "$LOGIN_CONFLUENT" = "n" ] || [ "$LOGIN_CONFLUENT" = "No" ]; then
+    elif [ "$LOGIN_CONFLUENT" = "no" ] || [ "$LOGIN_CONFLUENT" = "n" ] || [ "$LOGIN_CONFLUENT" = "N" ] || [ "$LOGIN_CONFLUENT" = "No" ]; then
         echo ;
     else 
         echo "Exiting.."

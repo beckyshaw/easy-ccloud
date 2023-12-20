@@ -46,7 +46,7 @@ eval " cat prod/env/$CLIENT_FILE "
 echo "Line count : " | eval " cat prod/env/$CLIENT_FILE | wc -l"
 echo ---------------------------------------------------------------------------
 read -p  " Is this correct ? (yes/no) " CONT
-    if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "CONT" = "Yes" ]; then
+    if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "$CONT" = "Y" ] || [ "CONT" = "Yes" ]; then
         echo ---------------------------------------------------------------
         echo "Deleting keys .... "
             while read -r line;

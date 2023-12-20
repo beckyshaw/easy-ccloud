@@ -69,7 +69,7 @@ if  [[ $ENVIRONMENT =~ $ENV ]]; then
     echo 
 
     read -p "Continue (yes/no)? " CONT
-    if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "CONT" = "Yes" ]; then
+    if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "$CONT" = "Y" ] || [ "CONT" = "Yes" ]; then
         eval "kubectl exec --stdin --tty $KAFKA_POD -- $VALIDATE1"
         eval "kubectl exec --stdin --tty $KAFKA_POD -- $VALIDATE2";
         echo "Complete"
