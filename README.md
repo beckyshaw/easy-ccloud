@@ -4,7 +4,7 @@
 Most of the scripts here are dirty and untidy but functional all the same. They're mostly for my own purpose and development but if you're here then i will have shared access for something at some point or by the power of the internet, here you are. 
 
 ## Quick tips
-Set the below aliases for quick running of scripts. All commands must be run from the ccloud directory
+Set the below aliases for quick running of scripts. All commands must be run from the 'easy-ccloud/ccloud' directory
 
 ```
   alias nonnonprod-get-secret="sh nonprod/tasks/get-secrets.sh"
