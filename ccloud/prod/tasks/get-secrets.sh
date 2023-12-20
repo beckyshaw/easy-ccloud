@@ -42,7 +42,7 @@ echo "You have selected the following: "
 echo " Secret_ID : $SECRET_ID "
 
 read -p  " Is this correct ? (yes/no) " CONT
-    if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || [ "CONT" = "Yes" ]; then
+    if [ "$CONT" = "yes" ] || [ "$CONT" = "y" ] || ["CONT" = "Y" ] || [ "CONT" = "Yes" ]; then
         echo
         echo " Showing all $SECRET_ID keys ... "
         echo ---------------------------------------------------------------
