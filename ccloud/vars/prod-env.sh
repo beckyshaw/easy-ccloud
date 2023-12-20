@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Variables: 
-ENV="{kubernetes-context-prod-name}"
+ENV="{aws-profile-prod-name}" 
 datestring="$(date)"
-BOOTSTRAP_PROD="{bootstrap-server:port}"
+BOOTSTRAP_PROD="{bootstrap-server:port}" 
 VLDT_VALUE=confluent.value.schema.validation=true
 VLDT_KEY=confluent.key.schema.validation=true
-FILE_PROPERTIES="properties-filename"
+FILE_PROPERTIES="properties-filename" 
 
 # Commands:
 KAFKA_POD="$(kubectl get pods --no-headers -o custom-columns=":metadata.name" | grep kafka-cli)"

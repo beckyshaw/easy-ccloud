@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Variables: 
-ENV="{kubernetes-nonprod-context-name}"
+ENV="{aws-profile-nonprod-name}"
 datestring="$(date)"
 BOOTSTRAP_NONPROD="{bootstrap-server:port}"
 VLDT_VALUE=confluent.value.schema.validation=true
